@@ -1,0 +1,1 @@
+ para trabajar con esta placa tienes que crearte un proyecto para la placa stm32_min_dev_blue que si tiene soporte y la arquitectura es muy parecida, solo se diferencia el mapeo de los perifericos y sustituir el dts por el del repo
