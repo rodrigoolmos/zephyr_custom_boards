@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/rodrigo/zephyrproject/zephyr/*",
+                "/home/rodrigo/zephyrproject/zephyr/include",
+                "/home/rodrigo/zephyrproject/zephyr/modules/cmsis",
+                "/home/rodrigo/zephyrproject/zephyr/kernel/include",
+                "/home/rodrigo/zephyrproject/zephyr/drivers/timer/",
+                "/home/rodrigo/zephyrproject/zephyr/kernel/include/",
+                "/home/rodrigo/zephyrproject/zephyr/arch/arc/include",
+                "/home/rodrigo/zephyrproject/zephyr/kernel/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
