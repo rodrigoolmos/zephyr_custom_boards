@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "device": "STM32H723VG",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build_1/zephyr/zephyr.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "postRestartCommands": [
+                "monitor psoc6 reset_halt sysresetreq",
+                "monitor gdb_sync",
+                "stepi"
+            ],
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+                "set verbose on",
+                "monitor reset run",
+                "monitor sleep 1000"
+            ],
+            "gdbPath": "${userHome}/zephyr-sdk-0.16.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb"
+        },
+        {
+            "name": "Attach",
+            "device": "STM32H723VG",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build_1/zephyr/zephyr.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "postRestartCommands": [
+                "monitor psoc6 reset_halt sysresetreq",
+                "monitor gdb_sync",
+                "stepi"
+            ],
+            "gdbPath": "${userHome}/zephyr-sdk-0.16.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb"
+        },
+    ]
+}
